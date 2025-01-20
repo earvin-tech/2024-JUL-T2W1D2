@@ -152,4 +152,48 @@ let k = 0
 do {
     console.log(`K's value in do while loop: ${k}`)
     k++
-} while (k < 5)
+} while (k < 0)
+
+// for...of => arrays
+// for...in -> objects
+
+const fruits = ["Mango", "Orange", "Apple"]
+
+for (let fruit of fruits) {
+    console.log(fruit)
+}
+
+const person = {
+    name: "John",
+    city: "Sydney",
+    age: 27
+}
+
+for (let key in person) {
+    console.log(key)
+    console.log(person[key])
+    console.log("\n")
+}
+
+
+fruits.forEach(function fruitLoop(fruit, index) {
+    console.log(fruit, index)
+})
+
+// const fruits = ["Mango", "Orange", "Apple"]
+
+
+const upperCaseFruits = fruits.map(function fruitLoop(fruit) {
+    return (fruit.toUpperCase())
+})
+
+console.log(upperCaseFruits)
+
+
+const newFruits = ["Mango", "Orange", "Apple", "Banana"]
+
+const filteredFruits = newFruits.filter(function filterLoop(fruit) {
+    return fruit.length > 5
+})
+
+console.log(filteredFruits)
